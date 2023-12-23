@@ -32,7 +32,7 @@ namespace BLL.Services
             return mapped;
         }
 
-        public static ClientDTO Create(ClientDTO client)
+        public static ClientDTO CreateClient(ClientDTO client)
         {
             var config = new MapperConfiguration(c =>
             {
@@ -46,12 +46,12 @@ namespace BLL.Services
             return mapped2;
         }
 
-        public static bool Delete(int id)
+        public static bool DeleteClient(int id)
         {
             return DataAccessFactory.ClientData().Delete(id);
         }
 
-        public static ClientDTO Update(ClientDTO client)
+        public static ClientDTO UpdateClient(ClientDTO client)
         {
             var config = new MapperConfiguration(c =>
             {

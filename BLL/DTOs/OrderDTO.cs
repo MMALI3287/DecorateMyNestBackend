@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class OrderDTO
+    public class OrderDTO
     {
         public int OrderId { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class CatalogCategoryDTO
+    public class CatalogCategoryDTO
     {
         public int CatalogCategoryId { get; set; }
 

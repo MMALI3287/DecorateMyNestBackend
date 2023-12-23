@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class MaterialInventoryDTO
+    public class MaterialInventoryDTO
     {
         public int MaterialId { get; set; }
 

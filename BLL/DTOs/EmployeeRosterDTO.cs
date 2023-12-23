@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class EmployeeRosterDTO
+    public class EmployeeRosterDTO
     {
         public int EmployeeId { get; set; }
 

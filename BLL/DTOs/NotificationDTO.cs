@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class NotificationDTO
+    public class NotificationDTO
     {
         public int NotificationId { get; set; }
 

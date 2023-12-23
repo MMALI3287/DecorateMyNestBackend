@@ -2,7 +2,7 @@
 
 namespace BLL.DTOs
 {
-    internal class InProgressProjectDTO
+    public class InProgressProjectDTO
     {
         public int ProjectId { get; set; }
 

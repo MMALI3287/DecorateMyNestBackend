@@ -2,7 +2,7 @@
 
 namespace BLL.DTOs
 {
-    internal class FinancialTransactionDTO
+    public class FinancialTransactionDTO
     {
         public int TransactionId { get; set; }
 

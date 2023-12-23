@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class AdminDTO
+    public class AdminDTO
     {
         public int AdminId { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class AuthenticationDTO
+    public class AuthenticationDTO
     {
         public int UserId { get; set; }
 

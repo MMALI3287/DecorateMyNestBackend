@@ -1,6 +1,6 @@
 ﻿namespace BLL.DTOs
 {
-    internal class ChatListDTO
+    public class ChatListDTO
     {
         public int ChatId { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace BLL.DTOs
 {
-    internal class MessageDTO
+    public class MessageDTO
     {
         public int ChatId { get; set; }
 

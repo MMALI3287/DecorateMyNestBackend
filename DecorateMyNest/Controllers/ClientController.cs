@@ -1,70 +1,110 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
 using System;
-using System.Net;
-using System.Net.Http;
+using System.Collections.Generic;
 using System.Web.Http;
 
 namespace DecorateMyNest.Controllers
 {
+    [RoutePrefix("api/clients")]
     public class ClientController : ApiController
     {
         [HttpGet]
-        [Route("api/clients")]
-        public HttpResponseMessage GetClients()
+        [Route("")]
+        public IHttpActionResult Get()
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, ClientService.GetClients());
+                var clients = ClientService.GetClients();
+                return Ok(clients);
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+                return InternalServerError(ex);
             }
         }
 
         [HttpGet]
-        [Route("api/clients/{id}")]
-        public HttpResponseMessage GetClientsById(int id)
+        [Route("{id}")]
+        public IHttpActionResult GetById(int id)
         {
             try
             {
-                return Request.CreateResponse(HttpStatusCode.OK, ClientService.GetClientById(id));
+                var client = ClientService.GetClientById(id);
+                return Ok(client);
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+                return InternalServerError(ex);
             }
         }
 
         [HttpPost]
-        [Route("api/clients/create")]
-        public HttpResponseMessage Create(ClientDTO obj)
+        [Route("")]
+        public IHttpActionResult Create(ClientDTO obj)
         {
             try
             {
-                var data = ClientService.Create(obj);
-                return Request.CreateResponse(HttpStatusCode.OK, data);
+                var createdClient = ClientService.CreateClient(obj);
+                return Ok(createdClient);
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+                return InternalServerError(ex);
             }
         }
 
         [HttpPost]
-        [Route("api/clients/update")]
-        public HttpResponseMessage Update(ClientDTO obj)
+        [Route("create-multiple")]
+        public IHttpActionResult Create(List<ClientDTO> clients)
         {
             try
             {
-                var data = ClientService.Update(obj);
-                return Request.CreateResponse(HttpStatusCode.OK, data);
+                var createdClients = new List<ClientDTO>();
+
+                foreach (var client in clients)
+                {
+                    var createdClient = ClientService.CreateClient(client);
+                    createdClients.Add(createdClient);
+                }
+
+                return Ok(createdClients);
             }
             catch (Exception ex)
             {
-                return Request.CreateResponse(HttpStatusCode.InternalServerError, new { Message = ex.Message });
+                return InternalServerError(ex);
             }
         }
+
+        [HttpPut]
+        [Route("")]
+        public IHttpActionResult Update(ClientDTO obj)
+        {
+            try
+            {
+                var updatedClient = ClientService.UpdateClient(obj);
+                return Ok(updatedClient);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public IHttpActionResult Delete(int id)
+        {
+            try
+            {
+                var result = ClientService.DeleteClient(id);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
     }
 }

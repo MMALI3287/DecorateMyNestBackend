@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\AdminDTO.cs" />
-    <Compile Include="DTOs\AppoitmentDTO.cs" />
+    <Compile Include="DTOs\AppointmentDTO.cs" />
     <Compile Include="DTOs\ArchivedProjectDTO.cs" />
     <Compile Include="DTOs\AuthenticationDTO.cs" />
     <Compile Include="DTOs\CatalogCategoryDTO.cs" />
@@ -69,7 +69,27 @@
     <Compile Include="DTOs\SalaryTransactionDTO.cs" />
     <Compile Include="DTOs\VendorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdminService.cs" />
+    <Compile Include="Services\AppointmentService.cs" />
+    <Compile Include="Services\ArchivedProjectService.cs" />
+    <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\CatalogCategoryService.cs" />
+    <Compile Include="Services\CatalogService.cs" />
+    <Compile Include="Services\ChatListService.cs" />
     <Compile Include="Services\ClientService.cs" />
+    <Compile Include="Services\EmployeeRosterService.cs" />
+    <Compile Include="Services\FinancialTransactionService.cs" />
+    <Compile Include="Services\InProgressProjectService.cs" />
+    <Compile Include="Services\InstallmentTransactionService.cs" />
+    <Compile Include="Services\MaterialInventoryService.cs" />
+    <Compile Include="Services\MaterialTransactionService.cs" />
+    <Compile Include="Services\MessageService.cs" />
+    <Compile Include="Services\NotificationService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\ReservationService.cs" />
+    <Compile Include="Services\ReservationTransactionService.cs" />
+    <Compile Include="Services\SalaryTransactionService.cs" />
+    <Compile Include="Services\VendorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

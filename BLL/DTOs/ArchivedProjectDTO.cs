@@ -2,7 +2,7 @@
 
 namespace BLL.DTOs
 {
-    internal class ArchivedProjectDTO
+    public class ArchivedProjectDTO
     {
         public int ProjectId { get; set; }
 
