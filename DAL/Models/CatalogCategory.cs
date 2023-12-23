@@ -5,7 +5,7 @@ namespace DAL.Models
     public class CatalogCategory
     {
         [Key]
-        public int CatalogId { get; set; }
+        public int CatalogCategoryId { get; set; }
 
         [Required]
         public string CategoryName { get; set; }

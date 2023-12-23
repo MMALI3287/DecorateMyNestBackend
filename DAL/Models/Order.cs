@@ -2,7 +2,7 @@
 
 namespace DAL.Models
 {
-    public class Orders
+    public class Order
     {
         [Key]
         public int OrderId { get; set; }

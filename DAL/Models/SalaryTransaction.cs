@@ -5,7 +5,7 @@ namespace DAL.Models
     public class SalaryTransaction
     {
         [Key]
-        public int Id { get; set; }
+        public int TransactionId { get; set; }
 
         [Required]
         public int EmployeeId { get; set; }

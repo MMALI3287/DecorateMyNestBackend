@@ -5,7 +5,7 @@ namespace DAL.Models
     public class Catalog
     {
         [Key]
-        public int ItemId { get; set; }
+        public int CatalogId { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -21,7 +21,7 @@ namespace DAL.Models
 
         [Required]
         [StringLength(50)]
-        public int CategoryId { get; set; }
+        public int CatalogCategoryId { get; set; }
 
         public byte[] Picture { get; set; }
     }

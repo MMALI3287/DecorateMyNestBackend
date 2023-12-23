@@ -10,5 +10,13 @@ namespace DAL
         {
             return new ClientRepo();
         }
-    }
-}
+
+        public static IRepo<Reservation, int, Reservation> ReservationData()
+        {
+            return new ReservationRepo();
+        }
+
+        public static IRepo<ReservationTransaction, int, ReservationTransaction> ReservationTransactionData()
+        {
+            return new ReservationTransactionRepo();
+        }

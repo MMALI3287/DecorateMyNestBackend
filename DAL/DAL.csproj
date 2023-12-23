@@ -78,15 +78,35 @@
     <Compile Include="Models\MaterialTransaction.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\ReservationTransaction.cs" />
     <Compile Include="Models\SalaryTransaction.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminRepo.cs" />
+    <Compile Include="Repos\AppoitmentRepo.cs" />
+    <Compile Include="Repos\ArchivedProjectRepo.cs" />
+    <Compile Include="Repos\AuthenticationRepo.cs" />
+    <Compile Include="Repos\CatalogCategoryRepo.cs" />
+    <Compile Include="Repos\CatalogRepo.cs" />
+    <Compile Include="Repos\ChatListRepo.cs" />
     <Compile Include="Repos\ClientRepo.cs" />
+    <Compile Include="Repos\EmployeeRosterRepo.cs" />
+    <Compile Include="Repos\FinancialTransactionRepo.cs" />
+    <Compile Include="Repos\InProgressionProjectRepo.cs" />
+    <Compile Include="Repos\InstallmentTransactionRepo.cs" />
+    <Compile Include="Repos\MaterialInventoryRepo.cs" />
+    <Compile Include="Repos\MaterialTransactionRepo.cs" />
+    <Compile Include="Repos\MessageRepo.cs" />
+    <Compile Include="Repos\NotificationRepo.cs" />
+    <Compile Include="Repos\OrderRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
+    <Compile Include="Repos\ReservationRepo.cs" />
+    <Compile Include="Repos\ReservationTransactionRepo.cs" />
+    <Compile Include="Repos\SalaryTransactionRepo.cs" />
+    <Compile Include="Repos\VendorRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
