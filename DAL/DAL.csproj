@@ -62,6 +62,10 @@
     <Compile Include="Migrations\202312212257184_ProfilePic_NotRequired.designer.cs">
       <DependentUpon>202312212257184_ProfilePic_NotRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202312230236071_RepoDone.cs" />
+    <Compile Include="Migrations\202312230236071_RepoDone.designer.cs">
+      <DependentUpon>202312230236071_RepoDone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Appointment.cs" />
@@ -118,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202312212257184_ProfilePic_NotRequired.resx">
       <DependentUpon>202312212257184_ProfilePic_NotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202312230236071_RepoDone.resx">
+      <DependentUpon>202312230236071_RepoDone.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

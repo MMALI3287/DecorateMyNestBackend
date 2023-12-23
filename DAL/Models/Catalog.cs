@@ -16,11 +16,9 @@ namespace DAL.Models
         public string Description { get; set; }
 
         [Required]
-        [StringLength(50)]
         public int EstimatedPrice { get; set; }
 
         [Required]
-        [StringLength(50)]
         public int CatalogCategoryId { get; set; }
 
         public byte[] Picture { get; set; }
