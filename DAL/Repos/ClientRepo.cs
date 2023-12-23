@@ -1,27 +1,23 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
-using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class ClientRepo : Repo,IRepo<Client, int, Client>
+    internal class ClientRepo : Repo, IRepo<Client, int, Client>
     {
         public Client Create(Client obj)
         {
             contextDb.Clients.Add(obj);
-            if (contextDb.SaveChanges()>0) return obj;
+            if (contextDb.SaveChanges() > 0) return obj;
             return null;
         }
 
         public bool Delete(int id)
         {
             var client = Read(id);
-                contextDb.Clients.Remove(client);
+            contextDb.Clients.Remove(client);
             return contextDb.SaveChanges() > 0;
         }
 
@@ -39,7 +35,7 @@ namespace DAL.Repos
         {
             var extClient = Read(obj.ClientId);
             contextDb.Entry(extClient).CurrentValues.SetValues(obj);
-            if(contextDb.SaveChanges() > 0) return obj;
+            if (contextDb.SaveChanges() > 0) return obj;
             return null;
         }
     }

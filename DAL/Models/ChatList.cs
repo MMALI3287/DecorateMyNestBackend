@@ -2,12 +2,15 @@
 
 namespace DAL.Models
 {
-    public class Client
+    public class ChatList
     {
         [Key]
+        public int ChatId { get; set; }
+
+        [Required]
         public int ClientId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int AdminId { get; set; }
     }
 }

@@ -2,12 +2,12 @@
 
 namespace DAL.Models
 {
-    public class Admin
+    public class SalaryTransaction
     {
         [Key]
-        public int AdminId { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int EmployeeId { get; set; }
     }
 }

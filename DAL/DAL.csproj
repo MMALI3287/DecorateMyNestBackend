@@ -64,6 +64,24 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\ArchivedProject.cs" />
+    <Compile Include="Models\Authentication.cs" />
+    <Compile Include="Models\Catalog.cs" />
+    <Compile Include="Models\CatalogCategory.cs" />
+    <Compile Include="Models\ChatList.cs" />
+    <Compile Include="Models\EmployeeRoster.cs" />
+    <Compile Include="Models\FinancialTransaction.cs" />
+    <Compile Include="Models\InProgressProject.cs" />
+    <Compile Include="Models\InstallmentTransaction.cs" />
+    <Compile Include="Models\MaterialInventory.cs" />
+    <Compile Include="Models\MaterialTransaction.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\ReservationTransaction.cs" />
+    <Compile Include="Models\SalaryTransaction.cs" />
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

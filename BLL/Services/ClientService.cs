@@ -2,19 +2,12 @@
 using BLL.DTOs;
 using DAL;
 using DAL.Models;
-using DAL.Repos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace BLL.Services
 {
     public class ClientService
     {
-
         public static List<ClientDTO> GetClients()
         {
             var data = DataAccessFactory.ClientData().Read();
@@ -40,7 +33,7 @@ namespace BLL.Services
         }
 
         public static ClientDTO Create(ClientDTO client)
-        {            
+        {
             var config = new MapperConfiguration(c =>
             {
                 c.CreateMap<Client, ClientDTO>();
@@ -49,7 +42,7 @@ namespace BLL.Services
             var mapper = new Mapper(config);
             var mapped = mapper.Map<Client>(client);
             var data = DataAccessFactory.ClientData().Create(mapped);
-            var mapped2=mapper.Map<ClientDTO>(data);
+            var mapped2 = mapper.Map<ClientDTO>(data);
             return mapped2;
         }
 
@@ -65,8 +58,8 @@ namespace BLL.Services
                 c.CreateMap<Client, ClientDTO>();
                 c.CreateMap<ClientDTO, Client>();
             });
-            var mapper= new Mapper(config);
-            var mapped=mapper.Map<Client>(client);
+            var mapper = new Mapper(config);
+            var mapped = mapper.Map<Client>(client);
             var data = DataAccessFactory.ClientData().Update(mapped);
             var mapped2 = mapper.Map<ClientDTO>(data);
             return mapped2;

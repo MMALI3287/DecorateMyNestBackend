@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DAL.Interfaces
 {
@@ -13,7 +9,7 @@ namespace DAL.Interfaces
         List<Type> Read();
 
         Type Read(ID id);
-        
+
         RET Update(Type obj);
 
         bool Delete(ID id);
