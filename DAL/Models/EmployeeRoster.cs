@@ -20,6 +20,5 @@ namespace DAL.Models
 
         [Required]
         public int Salary { get; set; }
-
     }
 }

@@ -47,7 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\AdminDTO.cs" />
+    <Compile Include="DTOs\AppoitmentDTO.cs" />
+    <Compile Include="DTOs\ArchivedProjectDTO.cs" />
+    <Compile Include="DTOs\AuthenticationDTO.cs" />
+    <Compile Include="DTOs\CatalogCategoryDTO.cs" />
+    <Compile Include="DTOs\CatalogDTO.cs" />
+    <Compile Include="DTOs\ChatListDTO.cs" />
     <Compile Include="DTOs\ClientDTO.cs" />
+    <Compile Include="DTOs\EmployeeRosterDTO.cs" />
+    <Compile Include="DTOs\FinancialTransactionDTO.cs" />
+    <Compile Include="DTOs\InProgressProjectDTO.cs" />
+    <Compile Include="DTOs\InstallmentTransactionDTO.cs" />
+    <Compile Include="DTOs\MaterialInventoryDTO.cs" />
+    <Compile Include="DTOs\MaterialTransactionDTO.cs" />
+    <Compile Include="DTOs\MessageDTO.cs" />
+    <Compile Include="DTOs\NotificationDTO.cs" />
+    <Compile Include="DTOs\OrderDTO.cs" />
+    <Compile Include="DTOs\ReservationDTO.cs" />
+    <Compile Include="DTOs\ReservationTransactionDTO.cs" />
+    <Compile Include="DTOs\SalaryTransactionDTO.cs" />
+    <Compile Include="DTOs\VendorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ClientService.cs" />
   </ItemGroup>

@@ -14,7 +14,7 @@ namespace DAL.Models
         public int AdminId { get; set; }
 
         [Required]
-        public int FinancialTransactionId { get; set; }
+        public int TransactionId { get; set; }
 
         [Required]
         public bool IsComplete { get; set; }
