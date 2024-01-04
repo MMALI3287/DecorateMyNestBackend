@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -7,7 +8,7 @@ namespace DAL.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [Required]
-        public int EmployeeId { get; set; }
+        [ForeignKey("EmployeeId")]
+        public virtual EmployeeRoster EmployeeId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -7,8 +8,8 @@ namespace DAL.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [Required]
-        public int ProjectId { get; set; }
+        [ForeignKey("ProjectId")]
+        public virtual InProgressProject ProjectId { get; set; }
 
         [Required]
         public int InstallmentNumber { get; set; }

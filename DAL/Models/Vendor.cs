@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -7,8 +8,8 @@ namespace DAL.Models
         [Key]
         public int VendorId { get; set; }
 
-        [Required]
-        public int UserId { get; set; }
+        [ForeignKey("UserId")]
+        public virtual Authentication UserId { get; set; }
 
         [Required]
         [MaxLength(100)]

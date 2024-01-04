@@ -47,5 +47,7 @@ namespace DAL.Models
         [Required]
         [MaxLength(50)]
         public string Role { get; set; }
+
+        public virtual Admin Admin { get; set; }
     }
 }

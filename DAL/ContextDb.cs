@@ -46,5 +46,7 @@ namespace DAL
         public DbSet<ReservationTransaction> ReservationTransactions { get; set; }
 
         public DbSet<SalaryTransaction> SalaryTransactions { get; set; }
+
+        public DbSet<Token> Tokens { get; set; }
     }
 }

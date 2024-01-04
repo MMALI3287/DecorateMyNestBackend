@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -7,14 +8,14 @@ namespace DAL.Models
         [Key]
         public int OrderId { get; set; }
 
-        [Required]
-        public int VendorId { get; set; }
+        [ForeignKey("VendorId")]
+        public virtual Vendor VendorId { get; set; }
 
-        [Required]
-        public int AdminId { get; set; }
+        [ForeignKey("AdminId")]
+        public virtual Admin AdminId { get; set; }
 
-        [Required]
-        public int TransactionId { get; set; }
+        [ForeignKey("TransactionId")]
+        public virtual FinancialTransaction TransactionId { get; set; }
 
         [Required]
         public bool IsComplete { get; set; }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -18,8 +19,8 @@ namespace DAL.Models
         [Required]
         public int EstimatedPrice { get; set; }
 
-        [Required]
-        public int CatalogCategoryId { get; set; }
+        [ForeignKey("CatalogCategoryId")]
+        public virtual CatalogCategory CatalogCategoryId { get; set; }
 
         public byte[] Picture { get; set; }
     }
