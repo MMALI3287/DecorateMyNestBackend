@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿// Ignore Spelling: BLL
+
+using AutoMapper;
 using BLL.DTOs;
 using DAL;
 using DAL.Models;

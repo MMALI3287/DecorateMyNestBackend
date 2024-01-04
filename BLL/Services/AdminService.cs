@@ -1,4 +1,8 @@
-﻿using AutoMapper;
+﻿// Ignore Spelling: Admins
+// Ignore Spelling: Admin
+// Ignore Spelling: BLL
+
+using AutoMapper;
 using BLL.DTOs;
 using DAL;
 using DAL.Models;
