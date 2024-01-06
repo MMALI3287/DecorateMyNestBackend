@@ -67,12 +67,14 @@
     <Compile Include="DTOs\ReservationDTO.cs" />
     <Compile Include="DTOs\ReservationTransactionDTO.cs" />
     <Compile Include="DTOs\SalaryTransactionDTO.cs" />
+    <Compile Include="DTOs\TokenDTO.cs" />
     <Compile Include="DTOs\VendorDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdminService.cs" />
     <Compile Include="Services\AppointmentService.cs" />
     <Compile Include="Services\ArchivedProjectService.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\CatalogCategoryService.cs" />
     <Compile Include="Services\CatalogService.cs" />
     <Compile Include="Services\ChatListService.cs" />

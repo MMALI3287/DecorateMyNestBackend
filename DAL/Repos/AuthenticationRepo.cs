@@ -5,8 +5,15 @@ using System.Linq;
 
 namespace DAL.Repos
 {
-    internal class AuthenticationRepo : Repo, IRepo<Authentication, int, Authentication>
+    internal class AuthenticationRepo : Repo, IRepo<Authentication, int, Authentication>, IAuth<bool>
     {
+        public bool Authenticate(string username, string password)
+        {
+            var data = contextDb.Authentications.FirstOrDefault(u => u.UserName == username && u.Password == password);
+            if (data != null) return true;
+            return false;
+        }
+
         public Authentication Create(Authentication obj)
         {
             contextDb.Authentications.Add(obj);

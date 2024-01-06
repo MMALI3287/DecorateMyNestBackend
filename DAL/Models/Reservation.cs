@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -8,11 +9,11 @@ namespace DAL.Models
         [Key]
         public int ReservationId { get; set; }
 
-        [Required]
-        public int ClientId { get; set; }
+        [ForeignKey("ClientId")]
+        public virtual Client ClientId { get; set; }
 
-        [Required]
-        public int ProjectId { get; set; }
+        [ForeignKey("ProjectId")]
+        public virtual InProgressProject ProjectId { get; set; }
 
         [Required]
         public DateTime ReservationDate { get; set; }

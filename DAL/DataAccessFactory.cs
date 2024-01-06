@@ -111,5 +111,12 @@ namespace DAL
             return new VendorRepo();
         }
 
+        public static IAuth<bool> AuthData()
+        {
+            return new AuthenticationRepo();
+        }
+
+        public static IRepo<Token, string, Token> TokenData() => new TokenRepo();
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -7,7 +8,9 @@ namespace DAL.Models
         [Key]
         public int AdminId { get; set; }
 
-        [Required]
+        [ForeignKey("User")]
         public int UserId { get; set; }
+
+        public virtual Authentication User { get; set; }
     }
 }
