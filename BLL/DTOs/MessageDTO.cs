@@ -11,5 +11,7 @@ namespace BLL.DTOs
         public DateTime TimeStamp { get; set; }
 
         public int SenderId { get; set; }
+
+        public int ChatListId { get; set; }
     }
 }

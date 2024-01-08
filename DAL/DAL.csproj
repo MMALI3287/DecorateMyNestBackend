@@ -52,6 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Migrations\202401081028424_messagefieldadded.cs" />
+    <Compile Include="Migrations\202401081028424_messagefieldadded.designer.cs">
+      <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
@@ -114,6 +118,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202401080636449_initDb.resx">
       <DependentUpon>202401080636449_initDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401081028424_messagefieldadded.resx">
+      <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

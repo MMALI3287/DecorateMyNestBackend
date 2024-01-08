@@ -16,5 +16,7 @@ namespace DAL.Models
         [ForeignKey("Authentication")]
         public int SenderId { get; set; }
         public virtual Authentication Authentication { get; set; }
+
+        public int ChatListId { get; set; }
     }
 }
