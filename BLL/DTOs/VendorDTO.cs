@@ -4,7 +4,7 @@
     {
         public int VendorId { get; set; }
 
-        public int UserId { get; set; }
+        public int AuthId { get; set; }
 
         public string CompanyName { get; set; }
     }

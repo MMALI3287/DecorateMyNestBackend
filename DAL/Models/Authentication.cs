@@ -1,53 +1,48 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Models
 {
     public class Authentication
     {
         [Key]
-        public int UserId { get; set; }
+        public int AuthId { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string UserName { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Password { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string FirstName { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string LastName { get; set; }
 
-        [Required]
-        [StringLength(50)]
         public string EmailAddress { get; set; }
 
-        [Required]
-        [StringLength(50)]
         public string PhoneNumber { get; set; }
 
-        [Required]
-        [StringLength(50)]
         public string Address { get; set; }
 
-        [Required]
         public byte[] ProfilePicture { get; set; }
 
-        [Required]
         public bool Verified { get; set; }
 
-        [Required]
         public bool Banned { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Role { get; set; }
 
-        public virtual Admin Admin { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
+        public virtual ICollection<Notification> Notifications { get; set; }
+        public virtual ICollection<Admin> Admins { get; set; }
+        public virtual ICollection<EmployeeRoster> EmployeeRosters { get; set; }
+        public virtual ICollection<Vendor> Vendors { get; set; }
+
+        public Authentication()
+        {
+            Messages = new List<Message>();
+            Notifications = new List<Notification>();
+            Admins = new List<Admin>();
+            EmployeeRosters = new List<EmployeeRoster>();
+            Vendors = new List<Vendor>();
+        }
     }
 }

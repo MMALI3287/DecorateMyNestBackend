@@ -48,5 +48,10 @@ namespace DAL
         public DbSet<SalaryTransaction> SalaryTransactions { get; set; }
 
         public DbSet<Token> Tokens { get; set; }
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<InProgressProject>().Property(s => s.ClientId).;
+        //}
     }
 }

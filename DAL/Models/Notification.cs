@@ -8,22 +8,16 @@ namespace DAL.Models
         [Key]
         public int NotificationId { get; set; }
 
-        [ForeignKey("UserId")]
-        public virtual Authentication UserId { get; set; }
+        [ForeignKey("Authentication")]
+        public int ReceiverId { get; set; }
+        public virtual Authentication Authentication { get; set; }
 
-        [Required]
-        [MaxLength(100)]
         public string Content { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Type { get; set; }
 
-        [Required]
         public bool IsRead { get; set; }
 
-        [Required]
-        [MaxLength(200)]
         public string RedirectUrl { get; set; }
     }
 }

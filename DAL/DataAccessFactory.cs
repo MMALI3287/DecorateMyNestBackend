@@ -86,10 +86,6 @@ namespace DAL
             return new EmployeeRosterRepo();
         }
 
-        public static IRepo<Authentication, int, Authentication> AuthenticationData()
-        {
-            return new AuthenticationRepo();
-        }
 
         public static IRepo<InProgressProject, int, InProgressProject> InProgressProjectData()
         {
@@ -111,10 +107,11 @@ namespace DAL
             return new VendorRepo();
         }
 
-        public static IAuth<bool> AuthData()
+        public static IRepo<Authentication, int, Authentication> AuthenticationData()
         {
             return new AuthenticationRepo();
         }
+
 
         public static IRepo<Token, string, Token> TokenData() => new TokenRepo();
 

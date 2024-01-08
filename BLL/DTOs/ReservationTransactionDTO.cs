@@ -2,7 +2,9 @@
 {
     public class ReservationTransactionDTO
     {
-        public int TransactionId { get; set; }
+        public int ReservationTransactionId { get; set; }
+
+        public int FinancialTransactionId { get; set; }
 
         public int ReservationId { get; set; }
     }

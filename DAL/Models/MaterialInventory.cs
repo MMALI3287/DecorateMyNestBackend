@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Models
 {
@@ -7,17 +8,19 @@ namespace DAL.Models
         [Key]
         public int MaterialId { get; set; }
 
-        [Required]
-        [StringLength(50)]
         public string Name { get; set; }
 
-        [Required]
         public int Quantity { get; set; }
 
-        [StringLength(50)]
         public string Remarks { get; set; }
 
-        [Required]
         public int CriticalLimit { get; set; }
+
+        public virtual ICollection<MaterialTransaction> MaterialTransactions { get; set; }
+
+        public MaterialInventory()
+        {
+            MaterialTransactions = new List<MaterialTransaction>();
+        }
     }
 }

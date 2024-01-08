@@ -8,10 +8,9 @@ namespace BLL.DTOs
 
         public int ClientId { get; set; }
 
-        public int ProjectId { get; set; }
-
         public DateTime ReservationDate { get; set; }
 
         public string Status { get; set; }
+
     }
 }

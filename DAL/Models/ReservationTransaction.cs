@@ -6,9 +6,14 @@ namespace DAL.Models
     public class ReservationTransaction
     {
         [Key]
-        public int TransactionId { get; set; }
+        public int ReservationTransactionId { get; set; }
 
-        [ForeignKey("ReservationId")]
-        public virtual Reservation ReservationId { get; set; }
+        [ForeignKey("FinancialTransaction")]
+        public int FinancialTransactionId { get; set; }
+        public virtual FinancialTransaction FinancialTransaction { get; set; }
+
+        [ForeignKey("Reservation")]
+        public int ReservationId { get; set; }
+        public virtual Reservation Reservation { get; set; }
     }
 }

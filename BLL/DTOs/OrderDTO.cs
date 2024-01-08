@@ -6,9 +6,7 @@
 
         public int VendorId { get; set; }
 
-        public int AdminId { get; set; }
-
-        public int FinancialTransactionId { get; set; }
+        public int MaterialTransactionId { get; set; }
 
         public bool IsComplete { get; set; }
     }

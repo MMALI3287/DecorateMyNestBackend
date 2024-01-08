@@ -8,7 +8,8 @@ namespace DAL.Models
         [Key]
         public int TransactionId { get; set; }
 
-        [ForeignKey("EmployeeId")]
-        public virtual EmployeeRoster EmployeeId { get; set; }
+        [ForeignKey("EmployeeRoster")]
+        public int EmployeeId { get; set; }
+        public virtual EmployeeRoster EmployeeRoster { get; set; }
     }
 }

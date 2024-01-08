@@ -2,6 +2,8 @@
 {
     public class MaterialTransactionDTO
     {
+        public int MaterialTransactionId { get; set; }
+
         public int TransactionId { get; set; }
 
         public int MaterialId { get; set; }

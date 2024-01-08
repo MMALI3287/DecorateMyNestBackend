@@ -5,12 +5,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{332718F3-3BE0-4794-9BBC-E6737E0A6E5E}</ProjectGuid>
+    <ProjectGuid>{D320F596-9997-4524-93C2-C22D119D5B8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
     <AssemblyName>DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -51,25 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextDb.cs" />
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Repos\AdminRepo.cs" />
+    <Compile Include="ContextDb.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202312212134265_InitDb.cs" />
-    <Compile Include="Migrations\202312212134265_InitDb.designer.cs">
-      <DependentUpon>202312212134265_InitDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312212257184_ProfilePic_NotRequired.cs" />
-    <Compile Include="Migrations\202312212257184_ProfilePic_NotRequired.designer.cs">
-      <DependentUpon>202312212257184_ProfilePic_NotRequired.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312230236071_RepoDone.cs" />
-    <Compile Include="Migrations\202312230236071_RepoDone.designer.cs">
-      <DependentUpon>202312230236071_RepoDone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202312231323324_controllercreation.cs" />
-    <Compile Include="Migrations\202312231323324_controllercreation.designer.cs">
-      <DependentUpon>202312231323324_controllercreation.cs</DependentUpon>
+    <Compile Include="Migrations\202401080636449_initDb.cs" />
+    <Compile Include="Migrations\202401080636449_initDb.designer.cs">
+      <DependentUpon>202401080636449_initDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -79,6 +68,7 @@
     <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\CatalogCategory.cs" />
     <Compile Include="Models\ChatList.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\EmployeeRoster.cs" />
     <Compile Include="Models\FinancialTransaction.cs" />
     <Compile Include="Models\InProgressProject.cs" />
@@ -93,10 +83,8 @@
     <Compile Include="Models\SalaryTransaction.cs" />
     <Compile Include="Models\Token.cs" />
     <Compile Include="Models\Vendor.cs" />
-    <Compile Include="Models\Client.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repos\AdminRepo.cs" />
-    <Compile Include="Repos\AppoitmentRepo.cs" />
+    <Compile Include="Repos\AppointmentRepo.cs" />
     <Compile Include="Repos\ArchivedProjectRepo.cs" />
     <Compile Include="Repos\AuthenticationRepo.cs" />
     <Compile Include="Repos\CatalogCategoryRepo.cs" />
@@ -124,17 +112,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202312212134265_InitDb.resx">
-      <DependentUpon>202312212134265_InitDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312212257184_ProfilePic_NotRequired.resx">
-      <DependentUpon>202312212257184_ProfilePic_NotRequired.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312230236071_RepoDone.resx">
-      <DependentUpon>202312230236071_RepoDone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202312231323324_controllercreation.resx">
-      <DependentUpon>202312231323324_controllercreation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401080636449_initDb.resx">
+      <DependentUpon>202401080636449_initDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
