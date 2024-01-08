@@ -33,7 +33,7 @@ namespace DAL.Repos
 
         public ReservationTransaction Update(ReservationTransaction obj)
         {
-            var extReservationTransaction = Read(obj.TransactionId);
+            var extReservationTransaction = Read(obj.ReservationTransactionId);
             contextDb.Entry(extReservationTransaction).CurrentValues.SetValues(obj);
             if (contextDb.SaveChanges() > 0) return obj;
             return null;

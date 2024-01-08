@@ -9,13 +9,12 @@ namespace DAL.Models
         [Key]
         public int ChatId { get; set; }
 
-        [Required]
         public string MessageContent { get; set; }
 
-        [Required]
         public DateTime TimeStamp { get; set; }
 
-        [ForeignKey("SenderId")]
-        public virtual Authentication SenderId { get; set; }
+        [ForeignKey("Authentication")]
+        public int SenderId { get; set; }
+        public virtual Authentication Authentication { get; set; }
     }
 }

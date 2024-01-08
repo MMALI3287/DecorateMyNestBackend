@@ -2,7 +2,7 @@
 {
     public class AuthenticationDTO
     {
-        public int UserId { get; set; }
+        public int AuthId { get; set; }
 
         public string UserName { get; set; }
 

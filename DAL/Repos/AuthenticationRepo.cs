@@ -40,7 +40,7 @@ namespace DAL.Repos
 
         public Authentication Update(Authentication obj)
         {
-            var extAuthentication = Read(obj.UserId);
+            var extAuthentication = Read(obj.AuthId);
             contextDb.Entry(extAuthentication).CurrentValues.SetValues(obj);
             if (contextDb.SaveChanges() > 0) return obj;
             return null;

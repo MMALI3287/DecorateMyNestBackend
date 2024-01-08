@@ -2,6 +2,8 @@
 {
     public class InstallmentTransactionDTO
     {
+        public int InstallmentTransactionId { get; set; }
+
         public int TransactionId { get; set; }
 
         public int ProjectId { get; set; }

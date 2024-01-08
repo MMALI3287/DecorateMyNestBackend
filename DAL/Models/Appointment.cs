@@ -9,16 +9,16 @@ namespace DAL.Models
         [Key]
         public int AppointmentId { get; set; }
 
-        [ForeignKey("ClientId")]
-        public virtual Client ClientId { get; set; }
+        [ForeignKey("Client")]
+        public int ClientId { get; set; }
+        public virtual Client Client { get; set; }
 
-        [ForeignKey("EmployeeId")]
-        public virtual EmployeeRoster EmployeeId { get; set; }
+        [ForeignKey("EmployeeRoster")]
+        public int EmployeeId { get; set; }
+        public virtual EmployeeRoster EmployeeRoster { get; set; }
 
-        [Required]
         public DateTime AppointmentDate { get; set; }
 
-        [Required]
         public int AppointmentRoom { get; set; }
     }
 }

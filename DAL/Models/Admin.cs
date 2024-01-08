@@ -8,9 +8,8 @@ namespace DAL.Models
         [Key]
         public int AdminId { get; set; }
 
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-
-        public virtual Authentication User { get; set; }
+        [ForeignKey("Authentication")]
+        public int AuthId { get; set; }
+        public virtual Authentication Authentication { get; set; }
     }
 }

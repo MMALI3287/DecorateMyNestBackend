@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
@@ -8,18 +9,26 @@ namespace DAL.Models
         [Key]
         public int EmployeeId { get; set; }
 
-        [ForeignKey("UserId")]
-        public virtual Authentication UserId { get; set; }
+        [ForeignKey("Authentication")]
+        public int AuthId { get; set; }
+        public virtual Authentication Authentication { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Department { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Designation { get; set; }
 
-        [Required]
         public int Salary { get; set; }
+
+        public virtual ICollection<Appointment> Appointments { get; set; }
+        public virtual ICollection<ChatList> ChatLists { get; set; }
+        public virtual ICollection<SalaryTransaction> SalaryTransactions { get; set; }
+
+
+        public EmployeeRoster()
+        {
+            Appointments = new List<Appointment>();
+            ChatLists = new List<ChatList>();
+            SalaryTransactions = new List<SalaryTransaction>();
+        }
     }
 }

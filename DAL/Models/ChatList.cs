@@ -8,13 +8,16 @@ namespace DAL.Models
         [Key]
         public int ChatId { get; set; }
 
-        [ForeignKey("ClientId")]
-        public virtual Client ClientId { get; set; }
+        [ForeignKey("Client")]
+        public int ClientId { get; set; }
+        public virtual Client Client { get; set; }
 
-        [ForeignKey("AdminId")]
-        public virtual Admin AdminId { get; set; }
+        [ForeignKey("EmployeeRoster")]
+        public int EmployeeId { get; set; }
+        public virtual EmployeeRoster EmployeeRoster { get; set; }
 
-        [ForeignKey("ProjectId")]
-        public virtual InProgressProject ProjectId { get; set; }
+        [ForeignKey("InProgressProject")]
+        public int ProjectId { get; set; }
+        public virtual InProgressProject InProgressProject { get; set; }
     }
 }

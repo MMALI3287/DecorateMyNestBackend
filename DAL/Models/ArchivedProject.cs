@@ -6,25 +6,23 @@ namespace DAL.Models
 {
     public class ArchivedProject
     {
-        [Key]
+        [Key, ForeignKey("InProgressProject")]
         public int ProjectId { get; set; }
 
-        [ForeignKey("ClientId")]
-        public virtual Client ClientId { get; set; }
+        [ForeignKey("Client")]
+        public int ClientId { get; set; }
+        public virtual Client Client { get; set; }
 
-        [Required]
         public DateTime CompletionDate { get; set; }
 
-        [Required]
-        [MaxLength(100)]
         public string Review { get; set; }
 
-        [Required]
         public int Rating { get; set; }
 
-        [Required]
         public int Revenue { get; set; }
 
         public byte[] Picture { get; set; }
+
+        public virtual InProgressProject InProgressProject { get; set; }
     }
 }

@@ -4,6 +4,8 @@ namespace BLL.DTOs
 {
     public class TokenDTO
     {
+        public int Id { get; set; }
+
         public string TokenKey { get; set; }
 
         public DateTime CreatedAt { get; set; }

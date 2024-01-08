@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
@@ -8,11 +9,17 @@ namespace DAL.Models
         [Key]
         public int VendorId { get; set; }
 
-        [ForeignKey("UserId")]
-        public virtual Authentication UserId { get; set; }
+        [ForeignKey("Authentication")]
+        public int AuthId { get; set; }
+        public virtual Authentication Authentication { get; set; }
 
-        [Required]
-        [MaxLength(100)]
         public string CompanyName { get; set; }
+
+        public virtual ICollection<MaterialTransaction> MaterialTransactions { get; set; }
+
+        public Vendor()
+        {
+            MaterialTransactions = new List<MaterialTransaction>();
+        }
     }
 }

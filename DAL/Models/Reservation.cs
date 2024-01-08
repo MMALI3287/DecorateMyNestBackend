@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DAL.Models
 {
@@ -9,16 +9,20 @@ namespace DAL.Models
         [Key]
         public int ReservationId { get; set; }
 
-        [ForeignKey("ClientId")]
-        public virtual Client ClientId { get; set; }
+        public int ClientId { get; set; }
 
-        [ForeignKey("ProjectId")]
-        public virtual InProgressProject ProjectId { get; set; }
-
-        [Required]
         public DateTime ReservationDate { get; set; }
 
-        [Required]
         public string Status { get; set; }
+
+        public virtual ICollection<InProgressProject> InProgressProjects { get; set; }
+        public virtual ICollection<ReservationTransaction> ReservationTransactions { get; set; }
+
+        public Reservation()
+        {
+            ReservationTransactions = new List<ReservationTransaction>();
+            InProgressProjects = new List<InProgressProject>();
+        }
     }
+
 }

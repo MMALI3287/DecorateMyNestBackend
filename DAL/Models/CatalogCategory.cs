@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DAL.Models
 {
@@ -7,7 +8,13 @@ namespace DAL.Models
         [Key]
         public int CatalogCategoryId { get; set; }
 
-        [Required]
         public string CategoryName { get; set; }
+
+        public virtual ICollection<Catalog> Catalogs { get; set; }
+
+        public CatalogCategory()
+        {
+            Catalogs = new List<Catalog>();
+        }
     }
 }

@@ -1,7 +1,4 @@
-﻿// Ignore Spelling: RET
-// Ignore Spelling: Repo
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace DAL.Interfaces
 {
