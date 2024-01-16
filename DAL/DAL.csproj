@@ -52,9 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="Interfaces\IRegi.cs" />
     <Compile Include="Migrations\202401081028424_messagefieldadded.cs" />
     <Compile Include="Migrations\202401081028424_messagefieldadded.designer.cs">
       <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202401161611367_authadded.cs" />
+    <Compile Include="Migrations\202401161611367_authadded.designer.cs">
+      <DependentUpon>202401161611367_authadded.cs</DependentUpon>
     </Compile>
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
@@ -121,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401081028424_messagefieldadded.resx">
       <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202401161611367_authadded.resx">
+      <DependentUpon>202401161611367_authadded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

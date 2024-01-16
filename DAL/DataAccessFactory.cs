@@ -112,6 +112,15 @@ namespace DAL
             return new AuthenticationRepo();
         }
 
+        public static IAuth<Token> AuthData()
+        {
+            return new AuthenticationRepo();
+        }
+
+        public static IRegi<Authentication, string> RegistrationData2()
+        {
+            return new AuthenticationRepo();
+        }
 
         public static IRepo<Token, string, Token> TokenData() => new TokenRepo();
 

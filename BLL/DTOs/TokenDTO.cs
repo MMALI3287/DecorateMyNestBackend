@@ -15,5 +15,7 @@ namespace BLL.DTOs
         public string UserId { get; set; }
 
         public DateTime ExpiresAt { get; set; }
+
+        public string Role { get; set; }
     }
 }
