@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class ReservationTransactionRepo : Repo, IRepo<ReservationTransaction, int, ReservationTransaction>
     {
+        internal ReservationTransactionRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var reservationTransaction = new ReservationTransactionRepo(options);
+        }
+
         public ReservationTransaction Create(ReservationTransaction obj)
         {
             contextDb.ReservationTransactions.Add(obj);

@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,12 @@ namespace DAL.Repos
 {
     internal class EmployeeRosterRepo : Repo, IRepo<EmployeeRoster, int, EmployeeRoster>
     {
+
+        internal EmployeeRosterRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var employeeRoster = new EmployeeRosterRepo(options);
+        }
+
         public EmployeeRoster Create(EmployeeRoster obj)
         {
             contextDb.EmployeeRosters.Add(obj);

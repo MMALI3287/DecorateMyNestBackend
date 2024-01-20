@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class InstallmentTransactionRepo : Repo, IRepo<InstallmentTransaction, int, InstallmentTransaction>
     {
+        internal InstallmentTransactionRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var installmentTransaction = new InstallmentTransactionRepo(options);
+        }
+
         public InstallmentTransaction Create(InstallmentTransaction obj)
         {
             contextDb.InstallmentTransactions.Add(obj);

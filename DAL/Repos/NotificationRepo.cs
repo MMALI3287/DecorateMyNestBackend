@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class NotificationRepo : Repo, IRepo<Notification, int, Notification>
     {
+        internal NotificationRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var notification = new NotificationRepo(options);
+        }
+
         public Notification Create(Notification obj)
         {
             contextDb.Notifications.Add(obj);

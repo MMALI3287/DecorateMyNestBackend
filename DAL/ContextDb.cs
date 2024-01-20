@@ -1,10 +1,12 @@
 ﻿using DAL.Models;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
     public class ContextDb : DbContext
     {
+        //public ContextDb(DbContextOptions<ContextDb> options) : base(options) { }
+
         public DbSet<Client> Clients { get; set; }
 
         public DbSet<Admin> Admins { get; set; }
@@ -49,9 +51,8 @@ namespace DAL
 
         public DbSet<Token> Tokens { get; set; }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<InProgressProject>().Property(s => s.ClientId).;
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
     }
 }

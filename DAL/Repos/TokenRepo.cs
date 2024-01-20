@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class TokenRepo : Repo, IRepo<Token, string, Token>
     {
+        internal TokenRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var token = new TokenRepo(options);
+        }
+
         public Token Create(Token obj)
         {
             contextDb.Tokens.Add(obj);

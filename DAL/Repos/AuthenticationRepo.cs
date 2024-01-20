@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class AuthenticationRepo : Repo, IRepo<Authentication, int, Authentication>, IAuth<bool>, IRegi<Authentication, string>
     {
+        internal AuthenticationRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var authentication = new AuthenticationRepo(options);
+        }
+
         public bool Authenticate(string username, string password)
         {
             var data = (from d in contextDb.Authentications where d.UserName.Equals(username) && d.Password.Equals(password) select d).SingleOrDefault();

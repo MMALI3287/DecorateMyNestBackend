@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class VendorRepo : Repo, IRepo<Vendor, int, Vendor>
     {
+        internal VendorRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var vendor = new VendorRepo(options);
+        }
+
         public Vendor Create(Vendor obj)
         {
             contextDb.Vendors.Add(obj);

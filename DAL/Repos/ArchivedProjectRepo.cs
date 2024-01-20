@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class ArchivedProjectRepo : Repo, IRepo<ArchivedProject, int, ArchivedProject>
     {
+        internal ArchivedProjectRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var archivedProject = new ArchivedProjectRepo(options);
+        }
+
         public ArchivedProject Create(ArchivedProject obj)
         {
             contextDb.ArchivedProjects.Add(obj);

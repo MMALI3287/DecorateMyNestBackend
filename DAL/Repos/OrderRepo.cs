@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class OrderRepo : Repo, IRepo<Order, int, Order>
     {
+        internal OrderRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var order = new OrderRepo(options);
+        }
+
         public Order Create(Order obj)
         {
             contextDb.Orders.Add(obj);

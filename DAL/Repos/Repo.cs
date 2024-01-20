@@ -1,12 +1,14 @@
-﻿namespace DAL.Repos
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace DAL.Repos
 {
     internal class Repo
     {
         internal ContextDb contextDb;
 
-        internal Repo()
+        internal Repo(DbContextOptions<ContextDb> options) : base(options)
         {
-            contextDb = new ContextDb();
+            contextDb = new ContextDb(options);
         }
     }
 }

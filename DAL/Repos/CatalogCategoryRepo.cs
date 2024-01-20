@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class CatalogCategoryRepo : Repo, IRepo<CatalogCategory, int, CatalogCategory>
     {
+        internal CatalogCategoryRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var catalogCategory = new CatalogCategoryRepo(options);
+        }
+
         public CatalogCategory Create(CatalogCategory obj)
         {
             contextDb.CatalogCategories.Add(obj);

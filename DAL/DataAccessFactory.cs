@@ -1,11 +1,15 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
 using DAL.Repos;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
     public class DataAccessFactory
     {
+        private DbContextOptions<ContextDb> dbContextOptions = new DbContextOptionsBuilder<ContextDb>()
+    .UseSqlServer("your_connection_string_here")
+    .Options;
         public static IRepo<Client, int, Client> ClientData()
         {
             return new ClientRepo();

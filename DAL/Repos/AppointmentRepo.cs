@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class AppoitmentRepo : Repo, IRepo<Appointment, int, Appointment>
     {
+        internal AppoitmentRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var appointment = new AppoitmentRepo(options);
+        }
+
         public Appointment Create(Appointment obj)
         {
             contextDb.Appointments.Add(obj);

@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class MaterialInventoryRepo : Repo, IRepo<MaterialInventory, int, MaterialInventory>
     {
+        internal MaterialInventoryRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var materialInventory = new MaterialInventoryRepo(options);
+        }
+
         public MaterialInventory Create(MaterialInventory obj)
         {
             contextDb.MaterialInventories.Add(obj);

@@ -2,6 +2,7 @@
 
 using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,6 +10,11 @@ namespace DAL.Repos
 {
     internal class AdminRepo : Repo, IRepo<Admin, int, Admin>
     {
+        internal AdminRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var admin = new AdminRepo(options);
+        }
+
         public Admin Create(Admin obj)
         {
             contextDb.Admins.Add(obj);

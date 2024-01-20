@@ -1,104 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F617F1E-8092-4140-8F16-F3DB56516338}</ProjectGuid>
+    <TargetFramework>net8.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>BLL</AssemblyTitle>
+    <Product>BLL</Product>
+    <Copyright>Copyright ©  2024</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\DAL\DAL.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOs\AdminDTO.cs" />
-    <Compile Include="DTOs\AppointmentDTO.cs" />
-    <Compile Include="DTOs\ArchivedProjectDTO.cs" />
-    <Compile Include="DTOs\AuthenticationDTO.cs" />
-    <Compile Include="DTOs\CatalogCategoryDTO.cs" />
-    <Compile Include="DTOs\CatalogDTO.cs" />
-    <Compile Include="DTOs\ChatListDTO.cs" />
-    <Compile Include="DTOs\ClientDTO.cs" />
-    <Compile Include="DTOs\EmployeeRosterDTO.cs" />
-    <Compile Include="DTOs\FinancialTransactionDTO.cs" />
-    <Compile Include="DTOs\InProgressProjectDTO.cs" />
-    <Compile Include="DTOs\InstallmentTransactionDTO.cs" />
-    <Compile Include="DTOs\MaterialInventoryDTO.cs" />
-    <Compile Include="DTOs\MaterialTransactionDTO.cs" />
-    <Compile Include="DTOs\MessageDTO.cs" />
-    <Compile Include="DTOs\NotificationDTO.cs" />
-    <Compile Include="DTOs\OrderDTO.cs" />
-    <Compile Include="DTOs\ReservationDTO.cs" />
-    <Compile Include="DTOs\ReservationTransactionDTO.cs" />
-    <Compile Include="DTOs\SalaryTransactionDTO.cs" />
-    <Compile Include="DTOs\TokenDTO.cs" />
-    <Compile Include="DTOs\VendorDTO.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AdminService.cs" />
-    <Compile Include="Services\AppointmentService.cs" />
-    <Compile Include="Services\ArchivedProjectService.cs" />
-    <Compile Include="Services\AuthenticationService.cs" />
-    <Compile Include="Services\AuthService.cs" />
-    <Compile Include="Services\CatalogCategoryService.cs" />
-    <Compile Include="Services\CatalogService.cs" />
-    <Compile Include="Services\ChatListService.cs" />
-    <Compile Include="Services\ClientService.cs" />
-    <Compile Include="Services\EmployeeRosterService.cs" />
-    <Compile Include="Services\FinancialTransactionService.cs" />
-    <Compile Include="Services\InProgressProjectService.cs" />
-    <Compile Include="Services\InstallmentTransactionService.cs" />
-    <Compile Include="Services\MaterialInventoryService.cs" />
-    <Compile Include="Services\MaterialTransactionService.cs" />
-    <Compile Include="Services\MessageService.cs" />
-    <Compile Include="Services\NotificationService.cs" />
-    <Compile Include="Services\OrderService.cs" />
-    <Compile Include="Services\ReservationService.cs" />
-    <Compile Include="Services\ReservationTransactionService.cs" />
-    <Compile Include="Services\SalaryTransactionService.cs" />
-    <Compile Include="Services\VendorService.cs" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{d320f596-9997-4524-93c2-c22d119d5b8a}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

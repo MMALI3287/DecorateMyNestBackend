@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class ClientRepo : Repo, IRepo<Client, int, Client>
     {
+        internal ClientRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var client = new ClientRepo(options);
+        }
+
         public Client Create(Client obj)
         {
             contextDb.Clients.Add(obj);

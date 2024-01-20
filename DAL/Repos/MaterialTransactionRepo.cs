@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class MaterialTransactionRepo : Repo, IRepo<MaterialTransaction, int, MaterialTransaction>
     {
+        internal MaterialTransactionRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var materialTransaction = new MaterialTransactionRepo(options);
+        }
+
         public MaterialTransaction Create(MaterialTransaction obj)
         {
             contextDb.MaterialTransactions.Add(obj);

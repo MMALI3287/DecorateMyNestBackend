@@ -1,11 +1,17 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace DAL.Repos
 {
     internal class MessageRepo : Repo, IRepo<Message, int, Message>
     {
+        internal MessageRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var message = new MessageRepo(options);
+        }
+
         public Message Create(Message obj)
         {
             contextDb.Messages.Add(obj);

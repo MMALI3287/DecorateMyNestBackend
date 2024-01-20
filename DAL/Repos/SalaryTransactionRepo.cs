@@ -1,5 +1,6 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +8,11 @@ namespace DAL.Repos
 {
     internal class SalaryTransactionRepo : Repo, IRepo<SalaryTransaction, int, SalaryTransaction>
     {
+        internal SalaryTransactionRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var salaryTransaction = new SalaryTransactionRepo(options);
+        }
+
         public SalaryTransaction Create(SalaryTransaction obj)
         {
             contextDb.SalaryTransactions.Add(obj);

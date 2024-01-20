@@ -1,11 +1,17 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace DAL.Repos
 {
     internal class InProgressProjectRepo : Repo, IRepo<InProgressProject, int, InProgressProject>
     {
+        internal InProgressProjectRepo(DbContextOptions<ContextDb> options) : base(options)
+        {
+            var inProgressProject = new InProgressProjectRepo(options);
+        }
+
         public InProgressProject Create(InProgressProject obj)
         {
             contextDb.InProgressProjects.Add(obj);
