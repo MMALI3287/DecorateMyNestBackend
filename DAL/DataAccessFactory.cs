@@ -112,7 +112,7 @@ namespace DAL
             return new AuthenticationRepo();
         }
 
-        public static IAuth<Token> AuthData()
+        public static IAuth<bool> AuthData()
         {
             return new AuthenticationRepo();
         }

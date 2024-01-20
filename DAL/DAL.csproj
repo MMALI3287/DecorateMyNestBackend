@@ -53,23 +53,19 @@
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
     <Compile Include="Interfaces\IRegi.cs" />
-    <Compile Include="Migrations\202401081028424_messagefieldadded.cs" />
-    <Compile Include="Migrations\202401081028424_messagefieldadded.designer.cs">
-      <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
+    <Compile Include="Migrations\202401201538513_initdb.cs" />
+    <Compile Include="Migrations\202401201538513_initdb.designer.cs">
+      <DependentUpon>202401201538513_initdb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202401161611367_authadded.cs" />
-    <Compile Include="Migrations\202401161611367_authadded.designer.cs">
-      <DependentUpon>202401161611367_authadded.cs</DependentUpon>
+    <Compile Include="Migrations\202401201539486_initdbb.cs" />
+    <Compile Include="Migrations\202401201539486_initdbb.designer.cs">
+      <DependentUpon>202401201539486_initdbb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
-    <Compile Include="Migrations\202401080636449_initDb.cs" />
-    <Compile Include="Migrations\202401080636449_initDb.designer.cs">
-      <DependentUpon>202401080636449_initDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\ArchivedProject.cs" />
@@ -121,14 +117,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202401080636449_initDb.resx">
-      <DependentUpon>202401080636449_initDb.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401201538513_initdb.resx">
+      <DependentUpon>202401201538513_initdb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401081028424_messagefieldadded.resx">
-      <DependentUpon>202401081028424_messagefieldadded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202401161611367_authadded.resx">
-      <DependentUpon>202401161611367_authadded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202401201539486_initdbb.resx">
+      <DependentUpon>202401201539486_initdbb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

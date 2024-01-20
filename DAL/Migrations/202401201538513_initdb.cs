@@ -2,7 +2,7 @@
 {
     using System.Data.Entity.Migrations;
 
-    public partial class initDb : DbMigration
+    public partial class initdb : DbMigration
     {
         public override void Up()
         {
@@ -256,6 +256,7 @@
                     MessageContent = c.String(),
                     TimeStamp = c.DateTime(nullable: false),
                     SenderId = c.Int(nullable: false),
+                    ChatListId = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.ChatId)
                 .ForeignKey("dbo.Authentications", t => t.SenderId, cascadeDelete: true)
@@ -306,10 +307,11 @@
                 {
                     Id = c.Int(nullable: false, identity: true),
                     TokenKey = c.String(),
-                    CreatedAt = c.DateTime(nullable: false),
+                    CreatedAt = c.DateTime(),
                     DeletedAt = c.DateTime(),
                     UserId = c.String(),
                     ExpiresAt = c.DateTime(nullable: false),
+                    Role = c.String(),
                 })
                 .PrimaryKey(t => t.Id);
 

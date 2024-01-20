@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DAL.Repos
 {
-    internal class AuthenticationRepo : Repo, IRepo<Authentication, int, Authentication>, IAuth<Token>, IRegi<Authentication, string>
+    internal class AuthenticationRepo : Repo, IRepo<Authentication, int, Authentication>, IAuth<bool>, IRegi<Authentication, string>
     {
         public bool Authenticate(string username, string password)
         {
@@ -14,12 +14,12 @@ namespace DAL.Repos
             return false;
         }
 
-        public Token HasExtToken(string Username)
-        {
-            var extToken = (from t in contextDb.Tokens where t.UserId.Equals(Username) && t.DeletedAt == null select t).SingleOrDefault();
-            if (extToken != null) return extToken;
-            return null;
-        }
+        //public Token HasExtToken(string Username)
+        //{
+        //    var extToken = (from t in contextDb.Tokens where t.UserId.Equals(Username) && t.DeletedAt == null select t).SingleOrDefault();
+        //    if (extToken != null) return extToken;
+        //    return null;
+        //}
 
         public Authentication Create(Authentication obj)
         {
@@ -58,5 +58,10 @@ namespace DAL.Repos
             var extreg = (from r in contextDb.Authentications where r.UserName.Equals(id) select r).SingleOrDefault();
             return extreg;
         }
+
+        //Token IAuth<Token>.Authenticate(string username, string password)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
     }
 }
