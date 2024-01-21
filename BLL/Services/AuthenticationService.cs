@@ -64,5 +64,17 @@ namespace BLL.Services
             var mapped2 = mapper.Map<AuthenticationDTO>(data);
             return mapped2;
         }
+
+        public static AuthenticationDTO GetAuthenticationByUsername(string username)
+        {
+            var data = DataAccessFactory.RegistrationData2().GetAuthenticationByUsername(username);
+            var config = new MapperConfiguration(c =>
+            {
+                c.CreateMap<Authentication, AuthenticationDTO>();
+            });
+            var mapper = new Mapper(config);
+            var mapped = mapper.Map<AuthenticationDTO>(data);
+            return mapped;
+        }
     }
 }

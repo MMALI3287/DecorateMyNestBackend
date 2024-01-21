@@ -1,11 +1,12 @@
 ﻿using DAL.Interfaces;
 using DAL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DAL.Repos
 {
-    internal class TokenRepo : Repo, IRepo<Token, string, Token>
+    internal class TokenRepo : Repo, IRepo<Token, string, Token>, IReadByValue<Token, string, bool>
     {
         public Token Create(Token obj)
         {
@@ -21,12 +22,22 @@ namespace DAL.Repos
 
         public List<Token> Read()
         {
-            throw new System.NotImplementedException();
+            return contextDb.Tokens.ToList();
         }
 
-        public Token Read(string id)
+        public Token Read(string token)
         {
-            return contextDb.Tokens.FirstOrDefault(t => t.TokenKey == id);
+            return (from t in contextDb.Tokens where t.TokenKey == token && t.DeletedAt == null && t.ExpiresAt > DateTime.Now select t).SingleOrDefault();
+        }
+
+        public Token ReadByUser(string username)
+        {
+            return contextDb.Tokens.SingleOrDefault(t => t.UserId == username);
+        }
+
+        public Token ReadByValue(string value)
+        {
+            return contextDb.Tokens.SingleOrDefault(t => t.TokenKey == value);
         }
 
         public Token Update(Token obj)

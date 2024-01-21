@@ -2,7 +2,7 @@
 {
     public interface IAuth<Ret>
     {
-        Ret Authenticate(string username, string password);
-        //Ret HasExtToken(string Username);
+        bool Authenticate(string username, string password);
+        Ret HasExtToken(string Username);
     }
 }

@@ -106,5 +106,21 @@ namespace DecorateMyNest.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("users/{username}")]
+        public IHttpActionResult GetUserByUsername(string username)
+        {
+            try
+            {
+                var result = AuthenticationService.GetAuthenticationByUsername(username);
+                return Ok(result);
+
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+
+            }
+        }
     }
 }

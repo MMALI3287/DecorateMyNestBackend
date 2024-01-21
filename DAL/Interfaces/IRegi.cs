@@ -2,6 +2,6 @@
 {
     public interface IRegi<TYPE, ID>
     {
-        TYPE Read(ID id);
+        TYPE GetAuthenticationByUsername(ID id);
     }
 }

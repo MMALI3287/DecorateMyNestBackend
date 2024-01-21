@@ -8,6 +8,8 @@ namespace DAL.Models
         public Token()
         {
             CreatedAt = DateTime.Now;
+            ExpiresAt = DateTime.Now.AddMinutes(30);
+            DeletedAt = null;
         }
 
         [Key]
@@ -17,12 +19,10 @@ namespace DAL.Models
 
         public DateTime? CreatedAt { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
         public string UserId { get; set; }
 
         public DateTime? ExpiresAt { get; set; }
 
-        public string Role { get; set; }
+        public DateTime? DeletedAt { get; set; }
     }
 }

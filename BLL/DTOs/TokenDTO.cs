@@ -11,12 +11,10 @@ namespace BLL.DTOs
 
         public DateTime? CreatedAt { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
-
         public string UserId { get; set; }
 
         public DateTime? ExpiresAt { get; set; }
 
-        public string Role { get; set; }
+        public DateTime? DeletedAt { get; set; }
     }
 }
