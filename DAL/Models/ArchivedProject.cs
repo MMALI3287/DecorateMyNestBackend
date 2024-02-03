@@ -23,6 +23,8 @@ namespace DAL.Models
 
         public byte[] Picture { get; set; }
 
+        public string MimeType { get; set; }
+
         public virtual InProgressProject InProgressProject { get; set; }
     }
 }

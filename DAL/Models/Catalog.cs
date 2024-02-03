@@ -19,5 +19,7 @@ namespace DAL.Models
         public virtual CatalogCategory CatalogCategory { get; set; }
 
         public byte[] Picture { get; set; }
+
+        public string MimeType { get; set; }
     }
 }

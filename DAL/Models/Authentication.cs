@@ -24,6 +24,8 @@ namespace DAL.Models
 
         public byte[] ProfilePicture { get; set; }
 
+        public string MimeType { get; set; }
+
         public bool Verified { get; set; }
 
         public bool Banned { get; set; }

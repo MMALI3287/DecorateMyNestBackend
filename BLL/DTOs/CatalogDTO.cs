@@ -13,5 +13,7 @@
         public int CatalogCategoryId { get; set; }
 
         public byte[] Picture { get; set; }
+
+        public string MimeType { get; set; }
     }
 }

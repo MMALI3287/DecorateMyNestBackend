@@ -109,6 +109,10 @@
     <Compile Include="Migrations\202401202009392_edit.designer.cs">
       <DependentUpon>202401202009392_edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402032240379_mime added.cs" />
+    <Compile Include="Migrations\202402032240379_mime added.designer.cs">
+      <DependentUpon>202402032240379_mime added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
@@ -173,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202401202009392_edit.resx">
       <DependentUpon>202401202009392_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402032240379_mime added.resx">
+      <DependentUpon>202402032240379_mime added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
