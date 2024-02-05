@@ -113,6 +113,22 @@
     <Compile Include="Migrations\202402032240379_mime added.designer.cs">
       <DependentUpon>202402032240379_mime added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402042241496_nullemployee.cs" />
+    <Compile Include="Migrations\202402042241496_nullemployee.designer.cs">
+      <DependentUpon>202402042241496_nullemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402042246307_deleteforeignappointmentemployee.cs" />
+    <Compile Include="Migrations\202402042246307_deleteforeignappointmentemployee.designer.cs">
+      <DependentUpon>202402042246307_deleteforeignappointmentemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402042328498_added catalog in reservation.cs" />
+    <Compile Include="Migrations\202402042328498_added catalog in reservation.designer.cs">
+      <DependentUpon>202402042328498_added catalog in reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402050148509_transactionstatus.cs" />
+    <Compile Include="Migrations\202402050148509_transactionstatus.designer.cs">
+      <DependentUpon>202402050148509_transactionstatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
@@ -180,6 +196,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402032240379_mime added.resx">
       <DependentUpon>202402032240379_mime added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402042241496_nullemployee.resx">
+      <DependentUpon>202402042241496_nullemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402042246307_deleteforeignappointmentemployee.resx">
+      <DependentUpon>202402042246307_deleteforeignappointmentemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402042328498_added catalog in reservation.resx">
+      <DependentUpon>202402042328498_added catalog in reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402050148509_transactionstatus.resx">
+      <DependentUpon>202402050148509_transactionstatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

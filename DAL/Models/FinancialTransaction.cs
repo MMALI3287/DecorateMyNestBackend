@@ -15,6 +15,8 @@ namespace DAL.Models
 
         public string Description { get; set; }
 
+        public string Status { get; set; }
+
         public virtual ICollection<InstallmentTransaction> InstallmentTransactions { get; set; }
         public virtual ICollection<ReservationTransaction> ReservationTransactions { get; set; }
         public virtual ICollection<MaterialTransaction> MaterialTransactions { get; set; }

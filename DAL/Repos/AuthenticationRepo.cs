@@ -56,7 +56,7 @@ namespace DAL.Repos
 
         public Authentication GetAuthenticationByUsername(string id)
         {
-            var extreg = (from r in contextDb.Authentications where r.UserName.Equals(id) select r).SingleOrDefault();
+            var extreg = (from r in contextDb.Authentications where r.UserName.Equals(id) select r).FirstOrDefault();
             return extreg;
         }
 

@@ -12,5 +12,9 @@ namespace BLL.DTOs
 
         public string Status { get; set; }
 
+        public int CatalogId { get; set; }
+
+        public int CatalogCategoryId { get; set; }
+
     }
 }

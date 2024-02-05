@@ -19,14 +19,12 @@ namespace DAL.Models
 
         public int Salary { get; set; }
 
-        public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<ChatList> ChatLists { get; set; }
         public virtual ICollection<SalaryTransaction> SalaryTransactions { get; set; }
 
 
         public EmployeeRoster()
         {
-            Appointments = new List<Appointment>();
             ChatLists = new List<ChatList>();
             SalaryTransactions = new List<SalaryTransaction>();
         }

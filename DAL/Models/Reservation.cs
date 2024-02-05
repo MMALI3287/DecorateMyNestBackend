@@ -15,6 +15,10 @@ namespace DAL.Models
 
         public string Status { get; set; }
 
+        public int CatalogCategoryId { get; set; }
+
+        public int CatalogId { get; set; }
+
         public virtual ICollection<InProgressProject> InProgressProjects { get; set; }
         public virtual ICollection<ReservationTransaction> ReservationTransactions { get; set; }
 
