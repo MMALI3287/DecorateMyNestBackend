@@ -19,12 +19,6 @@ namespace DAL.Models
 
         public int Rating { get; set; }
 
-        public int Revenue { get; set; }
-
-        public byte[] Picture { get; set; }
-
-        public string MimeType { get; set; }
-
         public virtual InProgressProject InProgressProject { get; set; }
     }
 }

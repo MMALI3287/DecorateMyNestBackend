@@ -129,6 +129,14 @@
     <Compile Include="Migrations\202402050148509_transactionstatus.designer.cs">
       <DependentUpon>202402050148509_transactionstatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402150458517_reviewrefactored.cs" />
+    <Compile Include="Migrations\202402150458517_reviewrefactored.designer.cs">
+      <DependentUpon>202402150458517_reviewrefactored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402150739438_rewriteinstrans.cs" />
+    <Compile Include="Migrations\202402150739438_rewriteinstrans.designer.cs">
+      <DependentUpon>202402150739438_rewriteinstrans.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repos\AdminRepo.cs" />
     <Compile Include="ContextDb.cs" />
@@ -208,6 +216,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402050148509_transactionstatus.resx">
       <DependentUpon>202402050148509_transactionstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402150458517_reviewrefactored.resx">
+      <DependentUpon>202402150458517_reviewrefactored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402150739438_rewriteinstrans.resx">
+      <DependentUpon>202402150739438_rewriteinstrans.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

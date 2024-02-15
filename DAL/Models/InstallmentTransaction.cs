@@ -18,6 +18,5 @@ namespace DAL.Models
 
         public int InstallmentNumber { get; set; }
 
-        public int InstallmentDue { get; set; }
     }
 }
