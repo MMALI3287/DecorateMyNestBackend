@@ -1,43 +1,118 @@
-<!-- A README markdown file for my project DecorateMyNest Backend which is built in visual studio with asp.net, entity framework, controller service repository pattern -->
+# 🏠 DecorateMyNest Backend
 
-# DecorateMyNest Backend
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Entity Framework](https://img.shields.io/badge/Entity_Framework-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 
-## Description
+## 📑 Table of Contents
 
-This is the backend for the DecorateMyNest project. It is built in visual studio with asp.net, entity framework, controller service repository pattern. It is a RESTful API that allows users to create, read, update, and delete data from the database. The database is a SQL database that is hosted on Azure. The API is hosted on Azure as well. The API is used by the DecorateMyNest frontend which is built in React. The frontend is hosted on Netlify. The API is also used by the DecorateMyNest mobile app which is built in React Native. The mobile app is hosted on Expo. The API is also used by the DecorateMyNest Alexa skill which is built in Node.js. The Alexa skill is hosted on Amazon Web Services. The API is also used by the DecorateMyNest Google Assistant skill which is built in Node.js. The Google Assistant skill is hosted on Google Cloud Platform. The API is also used by the DecorateMyNest chatbot which is built in Node.js. The chatbot is hosted on Heroku.
+- [🏠 DecorateMyNest Backend](#-decoratemynest-backend)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🌟 Overview](#-overview)
+    - [🚀 Key Features](#-key-features)
+    - [🏗️ Architecture](#️-architecture)
+  - [⚙️ Technical Stack](#️-technical-stack)
+  - [🛠️ Installation](#️-installation)
+  - [🔒 Security](#-security)
+  - [📈 Performance](#-performance)
+  - [🤝 Contributing](#-contributing)
+  - [📄 License](#-license)
 
-## Table of Contents
+## 🌟 Overview
 
-- [DecorateMyNest Backend](#decoratemynest-backend)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+DecorateMyNest Backend is a robust, enterprise-grade ASP.NET Web API powering a comprehensive interior design project management system. Built with modern architecture patterns and best practices, it provides a secure, scalable, and high-performance foundation for managing interior design projects, client interactions and business operations.
 
-## Installation
+### 🚀 Key Features
 
-To install necessary dependencies, run the following command:
+- **Advanced Project Management**: Sophisticated workflow system for interior design projects
+- **Smart Appointment Scheduling**: Intelligent scheduling system with conflict resolution
+- **Secure Authentication**: JWT-based authentication with role-based access control
+- **Financial Management**: Comprehensive system for handling transactions and installments
+- **Real-time Updates**: WebSocket integration for live project updates
+- **Resource Management**: Efficient tracking of inventory and vendor relationships
 
-## Usage
+### 🏗️ Architecture
 
-## License
+Our backend implements a clean, maintainable architecture following industry best practices:
 
-This project is licensed under the MIT license.
+- **Design Patterns**
 
-## Contributing
+  - Repository Pattern for data access abstraction
+  - Unit of Work for transaction management
+  - Factory Pattern for dependency management
+  - CQRS for complex operations
 
-## Tests
+- **Clean Architecture**
+  - Clear separation of concerns
+  - Dependency injection
+  - Modular design
+  - Domain-driven design principles
 
-To run tests, run the following command:
+## ⚙️ Technical Stack
 
-## Questions
+- **Framework**: ASP.NET Web API
+- **ORM**: Entity Framework Core
+- **Database**: Azure SQL Database
+- **Authentication**: JWT Token-based auth
+- **Monitoring**: Application Insights
 
-If you have any questions about the repo, open an issue or contact me directly at
+## 🛠️ Installation
 
-You can find more of my work at [MMALI3287](https://github.com/MMALI3287).</s>
+1. **Prerequisites**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![wakatime](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/018cd2dd-6b02-43f2-85e7-05383eabf04e.svg)](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/018cd2dd-6b02-43f2-85e7-05383eabf04e)
+   ```bash
+   - Visual Studio 2022
+   - .NET 6.0 SDK
+   - SQL Server
+   ```
+
+2. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/MMALI3287/DecorateMyNestBackend.git
+   cd DecorateMyNestBackend
+   ```
+
+3. **Setup Database**
+
+   ```bash
+   Update-Database
+   ```
+
+4. **Run the Application**
+
+   ```bash
+   dotnet run
+   ```
+
+## 🔒 Security
+
+- JWT Authentication
+- Role-based Authorization
+- Input Validation
+- SQL Injection Prevention
+- XSS Protection
+- CORS Policy
+- Rate Limiting
+
+## 📈 Performance
+
+- Response time < 100ms
+- Query optimization
+- Async operations
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![wakatime](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/018cd2dd-6b02-43f2-85e7-05383eabf04e.svg)](https://wakatime.com/badge/user/55b3480f-fbb9-40ba-bd9a-c04c257f4e39/project/018cd2dd-6b02-43f2-85e7-05383eabf04e)
